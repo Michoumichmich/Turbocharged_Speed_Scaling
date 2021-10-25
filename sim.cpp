@@ -262,13 +262,19 @@ void test_policies(const std::vector<double> &works) {
             power_regular<2>
     >::simulate(works);
 
+    // FSP Strong dominance alpha 3
+    simulator<
+            fsp_scheduling,
+            frequency_scaling_invexp<3>,
+            turbocharging_policy_strong<ps_scheduling>,
+            power_regular<3>
+    >::simulate(works);
 
-    //simulator<ps_scheduling, frequency_scaling_constant>::simulate(works);
-    //simulator<ps_scheduling, frequency_scaling_invexp<1>>::simulate(works);
-    //simulator<fsp_scheduling, frequency_scaling_constant>::simulate(works);
+
+    simulator<ps_scheduling, frequency_scaling_constant>::simulate(works);
+    simulator<fsp_scheduling, frequency_scaling_constant>::simulate(works);
 
 }
-
 
 int main() {
     test_policies({10, 10, 10, 10, 10, 10});
