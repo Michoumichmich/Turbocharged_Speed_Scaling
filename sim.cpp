@@ -1,3 +1,5 @@
+//usr/bin/env g++ -std=c++14 -Ofast main.cpp -o bin ; ./bin ; rm bin ; exit $s ;
+
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -272,7 +274,7 @@ int main() {
     test_policies({10, 10, 10, 10, 10, 10});
     test_policies({10, 10, 10, 10, 10, 100000});
     test_policies({1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
-    test_policies(generate_random_jobs(20));
+    test_policies(generate_random_jobs(10));
     test_policies(generate_multiplicative_jobs(10));
     return 0;
 }
