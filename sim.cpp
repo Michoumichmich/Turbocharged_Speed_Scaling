@@ -5,7 +5,7 @@
 #include <cmath>
 #include <iomanip>
 #include <random>
-#include <algorithms>
+#include <algorithm>
 
 class frequency_scaling_constant {
 public:
