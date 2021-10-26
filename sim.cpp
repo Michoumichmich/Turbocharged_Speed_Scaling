@@ -1,4 +1,4 @@
-//usr/bin/env g++ -std=c++14 -Ofast main.cpp -o bin ; ./bin ; rm bin ; exit $s ;
+//usr/bin/env g++ -xc++ -std=c++14 -Ofast $0 -o bin_${0##*/} ; ./bin_${0##*/} ; rm bin_${0##*/} ; exit $s ;
 
 #include <iostream>
 #include <vector>
